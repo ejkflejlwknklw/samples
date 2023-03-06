@@ -35,7 +35,7 @@ recordButton.addEventListener('click', () => {
 
 const playButton = document.querySelector('button#play');
 playButton.addEventListener('click', () => {
-  const mimeType = codecPreferences.options[codecPreferences.selectedIndex].value.split(';', 1)[0];
+  const mimeType = 'video/mp4;codecs=h264';
   const superBuffer = new Blob(recordedBlobs, {type: mimeType});
   recordedVideo.src = null;
   recordedVideo.srcObject = null;
